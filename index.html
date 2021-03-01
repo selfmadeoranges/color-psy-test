@@ -81,6 +81,10 @@
         <h2 class="subtitle font">마음에 드는 순서대로 <b>3가지</b> 선택해보세요</h2>
     </section>
 
+    <section class="section" id="resulttext" style="display:none;">
+        <h1 class="title font"><b>테스트 결과</b></h1>
+    </section>
+
     <section class="mainsection">
         <div class="color-btn" id="allbtn">
             <div class="color-group01">
@@ -257,8 +261,9 @@
                 $("div[id='allbtn']").fadeOut(0);
                 $("div[id='startbtn']").fadeOut(0);
                 $("div[id='reselectionbtn']").fadeOut(0);
-                $("div[id='sectiontitle']").fadeOut(0);
+                $("section[id='sectiontitle']").fadeOut(0);
                 $("div[id='resultmain']").fadeIn(0);
+                $("section[id='resulttext']").fadeIn(0);
             });
         });
     </script>
