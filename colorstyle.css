@@ -1,0 +1,207 @@
+body {
+    background-color: #ffffff;
+}
+
+.nav-distance {
+    padding: 2.1% 7.7%;
+}
+
+.navbar-brand {
+    font-family: NanumSquareR;
+    line-height: 1.68;
+    text-align: left;
+    color: #35465d;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #ffffff;
+}
+
+.section {
+    margin-top: 8%;
+}
+
+.title {
+    font-family: NanumSquareR;
+    font-size: 3rem;
+    line-height: 1.67;
+    text-align: center;
+    color: var(--dark-grey-blue);
+}
+
+.subtitle {
+    margin-top: 3%;
+    font-family: NanumSquareR;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: var(--dark-grey-blue);
+}
+
+.color-btn {
+    text-align: center;
+}
+
+.color-group01 {
+    margin-top: 8%;
+}
+
+.color-group02 {
+    margin-top: 3%;
+}
+
+.other-btn {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.result-main {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.stbutton {
+    margin-top: 8%;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    border: solid 1.5px #444464;
+    background-color: #444464;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.rstbutton {
+    margin-top: 3%;
+    margin-bottom: 5%;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    border: solid 1.5px #444464;
+    background-color: #444464;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.rsltbutton {
+    margin-top: 3%;
+    margin-bottom: 5%;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    border: solid 1.5px #444464;
+    background-color: #444464;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.color-red {
+    background-color: rgba(255, 0, 0, 0.863);
+    border: none;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+.color-orange {
+    background-color: rgba(243, 152, 0, 0.863);
+    border: none;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+.color-yellow {
+    background-color: rgba(255, 240, 0, 0.863);
+    border: none;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+.color-green {
+    background-color: rgba(0, 153, 0, 0.863);
+    border: none;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+.color-turquoise {
+    background-color: rgba(2, 203, 255, 0.863);
+    border: none;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+.color-blue {
+    background-color: rgba(0, 0, 255, 0.863);
+    border: none;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+.color-violet {
+    background-color: rgba(128, 0, 128, 0.863);
+    border: none;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+.color-magenta {
+    background-color: rgba(255, 0, 255, 0.863);
+    border: none;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+.addthis_inline_share_toolbox {
+    text-align: center;
+}
+
+.ad-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}

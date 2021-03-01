@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="naver-site-verification" content="c66c7bd47a25f1cf93e1c4541ea6fa828162bc7e" />
+    <meta name="description" content="색채 심리 테스트">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="색채 심리 테스트">
+    <meta property="og:description" content="색채 심리 테스트">
+    <!-- <meta property="og:image" content="http://www.mysite.com/myimage.jpg"> -->
+    <meta property="og:url" content="https://color-psy-test.netlify.app/">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./colorstyle.css">
+    <link rel="canonical" href="https://color-psy-test.netlify.app/">
+
+    <title>색채 심리 테스트</title>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-603cae813960a5e9"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light nav-distance">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">색채 심리 테스트</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <h1 class="title"><b>색채 심리 테스트</b></h1>
+        <h2 class="subtitle">마음에 드는 순서대로 <b>3가지</b> 선택해보세요</h2>
+    </section>
+
+    <section class="mainsection">
+        <div class="color-btn" id="allbtn">
+            <div class="color-group01">
+                <input class="color-red" id="red" onclick="clickColor()" type="button" value="   "></input>
+                <input class="color-orange" id="orange" onclick="clickColor()" type="button" value="   "></input>
+                <input class="color-yellow" id="yellow" onclick="clickColor()" type="button" value="   "></input>
+                <input class="color-green" id="green" onclick="clickColor()" type="button" value="   "></input>
+            </div>
+            <div class="color-group02">
+                <input class="color-turquoise" id="turquoise" onclick="clickColor()" type="button" value="   "></input>
+                <input class="color-blue" id="blue" onclick="clickColor()" type="button" value="   "></input>
+                <input class="color-violet" id="violet" onclick="clickColor()" type="button" value="   "></input>
+                <input class="color-magenta" id="magenta" onclick="clickColor()" type="button" value="   "></input>
+            </div>
+        </div>
+        <div class="result-main" id="resultmain" style="display:none;">
+            <div class="result-01" id="res01">
+                <input id="result-01-box" type="button" value="   "></input>
+                <h3 class="title"><b>나는 어떤 사람인가</b></h3>
+            </div>
+            <div class="result-02" id="res02">
+                <input id="result-02-box" type="button" value="   "></input>
+                <h3 class="title"><b>무의식적 생각</b></h3>
+            </div>
+            <div class="result-03" id="res03">
+                <input id="result-03-box" type="button" value="   "></input>
+                <h3 class="title"><b>목표를 이루기 위해</b></h3>
+            </div>
+        </div>
+
+        <div class="other-btn">
+            <!-- <input class="stbutton" id="stbtn" onclick="location.href='result.html'" type="button" value="결과보기"></input> -->
+            <div class="start-btn" id="startbtn">
+                <input class="stbutton" id="stbtn" onclick="resultDisplay()" type="button" value="결과보기"></input>
+            </div>
+            <div class="reselection-btn" id="reselectionbtn">
+                <input class="rsltbutton" id="reselbtn" onclick="reselection()" type="button" value="재선택"></input>
+            </div>
+            <div class="restart-btn" id="restartbtn" style="display:none;">
+                <input class="rstbutton" id="rebtn" onclick="restart()" type="button" value="다시 테스트해보기"></input>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox"></div>
+
+    <!-- 광고 -->
+    <div class="ad-banner">
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-7DgciFks07MJD0vT" data-ad-width="320" data-ad-height="100"></ins>
+    </div>
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script>
+        var count = 0;
+        var colorArr = new Array(4);
+
+        function clickColor() {
+            var color = event.srcElement.id;
+            colorArr[count] = color;
+            count++;
+
+            if (count < 4) {
+                document.getElementById(color).value = " " + count + " ";
+            } else {
+                alert("3개만 선택 가능합니다! 재선택 버튼을 눌러주세요");
+                count = 3;
+            }
+        }
+
+        function reselection() {
+            document.getElementById("red").value = "   ";
+            document.getElementById("orange").value = "   ";
+            document.getElementById("yellow").value = "   ";
+            document.getElementById("green").value = "   ";
+            document.getElementById("turquoise").value = "   ";
+            document.getElementById("blue").value = "   ";
+            document.getElementById("violet").value = "   ";
+            document.getElementById("magenta").value = "   ";
+            count = 0;
+
+            document.getElementByid("testtest").sytle.display = "block";
+        }
+
+        function input_append01() {
+            app = document.getElementById("res01");
+            if (colorArr[0] == "red") {
+                app.innerHTML += "<p>남을&nbsp따르기보다&nbsp먼저&nbsp앞서&nbsp이끄는&nbsp성격으로&nbsp사교적이며&nbsp지도력이 있다.&nbsp경쟁심이&nbsp강하고&nbsp정열적이다.&nbsp목표&nbsp달성,&nbsp성공이라는&nbsp말을&nbsp자주&nbsp언급하며,&nbsp계획이나&nbsp전략보다&nbsp결단력을&nbsp믿고&nbsp목표를&nbsp향&nbsp해&nbsp행동한다.&nbsp끊임없이&nbsp에너지가&nbsp솟구치는&nbsp당신,&nbsp논리와&nbsp감정의&nbsp조화를&nbsp위해&nbsp노력하자.</p>";
+            } else if (colorArr[0] == "orange") {
+                app.innerHTML += "<p>경쾌하고&nbsp;낙천적인&nbsp;성격으로&nbsp;활기차고&nbsp;행복한&nbsp;기질을&nbsp;가진&nbsp;사람이다.&nbsp;인생을&nbsp;즐기면서&nbsp;어느&nbsp;곳이든지&nbsp;능동적으로&nbsp;참여해&nbsp;주위&nbsp;사람들을&nbsp;즐겁게&nbsp;한다.&nbsp;지나친&nbsp;활동은&nbsp;피로를&nbsp;부를&nbsp;수&nbsp;있다.&nbsp;균형&nbsp;있게&nbsp;일의&nbsp;순위를&nbsp;정하고,&nbsp;전체적인&nbsp;상황을&nbsp;살펴보려고&nbsp;노력하자.</p>";
+            } else if (colorArr[0] == "yellow") {
+                app.innerHTML += "<p>이성적이고&nbsp;논리적으로&nbsp;인생을&nbsp;바라보며,&nbsp;지적이고&nbsp;분석적이다.&nbsp;지배하기보다&nbsp;우월하기위해&nbsp;노력하며,&nbsp;관심&nbsp;있는&nbsp;분야에서&nbsp;전문성을&nbsp;자랑한다.&nbsp;말솜씨가&nbsp;뛰어나&nbsp;말이나&nbsp;숫자&nbsp;관련&nbsp;일에&nbsp;참여하며,&nbsp;책임감과&nbsp;권위를&nbsp;필요로&nbsp;하는&nbsp;곳에&nbsp;어울린다.</p>";
+            } else if (colorArr[0] == "green") {
+                app.innerHTML += "<p>언제나&nbsp;균형을&nbsp;추구해&nbsp;행동하기&nbsp;전에&nbsp;심사숙고하며&nbsp;자발적으로&nbsp;나서지&nbsp;않는다.&nbsp;능률적이고&nbsp;성실하며,&nbsp;깔끔하고&nbsp;단정하다.&nbsp;자연에&nbsp;탄복하며&nbsp;탁&nbsp;트인&nbsp;공간과&nbsp;자연&nbsp;소재&nbsp;제품에&nbsp;매력을&nbsp;느낀다.&nbsp;주변&nbsp;상황이나&nbsp;사람에&nbsp;대해&nbsp;지나친&nbsp;조심성을&nbsp;가진&nbsp;당신,&nbsp;변화의&nbsp;필요성에&nbsp;대해&nbsp;생각해보자.</p>";
+            } else if (colorArr[0] == "turquoise") {
+                app.innerHTML += "<p>겉으로&nbsp;침착하고&nbsp;차분한&nbsp;모습으로&nbsp;어려운&nbsp;일도&nbsp;수월하게&nbsp;처리하며,&nbsp;상황에&nbsp;따라&nbsp;참신한&nbsp;상상력을&nbsp;발휘한다.&nbsp;빠른&nbsp;결단과&nbsp;행동으로&nbsp;장애물에&nbsp;대처하는&nbsp;모습과&nbsp;편안한&nbsp;대화&nbsp;방식은&nbsp;인기&nbsp;요인이&nbsp;되며,&nbsp;뛰어난&nbsp;통찰력을&nbsp;지니고&nbsp;있어&nbsp;자신의&nbsp;목적이나&nbsp;방향의식을&nbsp;다른&nbsp;사람에게&nbsp;쉽게&nbsp;반영시킬&nbsp;수&nbsp;있다.&nbsp;너무&nbsp;영적인&nbsp;면에&nbsp;치중하기보다&nbsp;현실성&nbsp;있는&nbsp;아이디어를&nbsp;창출하자.</p>";
+            } else if (colorArr[0] == "blue") {
+                app.innerHTML += "<p>부드럽고&nbsp;온화하며&nbsp;쉽게&nbsp;흥분하지&nbsp;않는&nbsp;성격은&nbsp;다른&nbsp;이들에게&nbsp;소극적인&nbsp;사람으로&nbsp;보인다.&nbsp;정신적인&nbsp;면을&nbsp;중요시해&nbsp;진실함을&nbsp;자산으로&nbsp;여기며,&nbsp;믿음직하고&nbsp;충실하다.&nbsp;안정된&nbsp;에너지를&nbsp;발산하는&nbsp;당신과&nbsp;함께하는&nbsp;사람들은&nbsp;편안함을&nbsp;느낀다.&nbsp;자신에&nbsp;대한&nbsp;지나친&nbsp;몰입은&nbsp;고립과&nbsp;자신감&nbsp;결여로&nbsp;이어지니&nbsp;주의하자.</p>";
+            } else if (colorArr[0] == "violet") {
+                app.innerHTML += "<p>신비함과&nbsp;정신적&nbsp;세계에&nbsp;관심이&nbsp;많아&nbsp;영적인&nbsp;면을&nbsp;활용하지만&nbsp;현실에는&nbsp;잘&nbsp;적응한다.&nbsp;의미가&nbsp;있는&nbsp;봉사를&nbsp;원하며,&nbsp;고상하고&nbsp;예술적&nbsp;표현력이&nbsp;뛰어나&nbsp;예술,&nbsp;종교&nbsp;등의&nbsp;활동을&nbsp;직업으로&nbsp;삼으면&nbsp;좋다.&nbsp;설정한&nbsp;비전을&nbsp;달성할&nbsp;수&nbsp;없을&nbsp;것&nbsp;같다는&nbsp;자신감&nbsp;부족을&nbsp;이겨내자.</p>";
+            } else if (colorArr[0] == "magenta") {
+                app.innerHTML += "<p>친절하고&nbsp;사려&nbsp;깊은&nbsp;사람으로&nbsp;타인에게&nbsp;사랑과&nbsp;연민을&nbsp;보낼&nbsp;줄&nbsp;아는&nbsp;세상의&nbsp;소금&nbsp;같은&nbsp;존재.&nbsp;인생에&nbsp;대한&nbsp;성숙한&nbsp;이해심으로&nbsp;주위&nbsp;사람들을&nbsp;격려하고&nbsp;지지하려&nbsp;노력한다.&nbsp;타인과의&nbsp;협응력이&nbsp;뛰어나&nbsp;상담이나&nbsp;간호사,&nbsp;사회사업가&nbsp;같이&nbsp;타인을&nbsp;보살피는&nbsp;분야에&nbsp;일하는&nbsp;경우가&nbsp;많다.</p>";
+            }
+        }
+
+
+        function input_append02() {
+            app = document.getElementById("res02");
+            if (colorArr[1] == "red") {
+                app.innerHTML += "<p>나를&nbsp;자극하고&nbsp;분발시켜야&nbsp;할&nbsp;때.&nbsp;몸이&nbsp;지치지&nbsp;않도록&nbsp;신체적&nbsp;힘을&nbsp;기르고&nbsp;에너지를&nbsp;적절히조절하며&nbsp;인내심을&nbsp;가지려&nbsp;노력하자.&nbsp;</p>";
+            } else if (colorArr[1] == "orange") {
+                app.innerHTML += "<p>내적으로&nbsp;균형을&nbsp;찾기&nbsp;위해&nbsp;노력할&nbsp;때.&nbsp;강압적&nbsp;태도가&nbsp;자주&nbsp;보일&nbsp;수&nbsp;있으니&nbsp;느긋하고&nbsp;편안하게&nbsp;나에게&nbsp;시간을&nbsp;주자.</p>";
+            } else if (colorArr[1] == "yellow") {
+                app.innerHTML += "<p>현재에&nbsp;맞는&nbsp;에너지를&nbsp;표현할&nbsp;때.&nbsp;너무&nbsp;앞선&nbsp;아이디어는&nbsp;불만족&nbsp;상태를&nbsp;야기할&nbsp;수&nbsp;있으니현실을&nbsp;인지하자.</p>";
+            } else if (colorArr[1] == "green") {
+                app.innerHTML += "<p>내면의&nbsp;상처를&nbsp;돌봐야&nbsp;할&nbsp;때.&nbsp;감정을&nbsp;억누르고&nbsp;솔직한&nbsp;표현을&nbsp;어려워해&nbsp;위축감을&nbsp;느낄&nbsp;수&nbsp;있으니&nbsp;나를&nbsp;치유할&nbsp;수&nbsp;있는&nbsp;무언가&nbsp;혹은&nbsp;누군가를&nbsp;찾아보자.</p>";
+            } else if (colorArr[1] == "turquoise") {
+                app.innerHTML += "<p>사람들과&nbsp;조금&nbsp;거리를&nbsp;두어야&nbsp;할&nbsp;때.&nbsp;당신의&nbsp;에너지에&nbsp;이끌린&nbsp;사람들의&nbsp;요구로&nbsp;자신만의&nbsp;공간을&nbsp;침범당한&nbsp;지금,&nbsp;심신의&nbsp;정화가&nbsp;필요하다.</p>";
+            } else if (colorArr[1] == "blue") {
+                app.innerHTML += "<p>침묵을&nbsp;깨야&nbsp;할&nbsp;때.&nbsp;고요함과&nbsp;평화로운&nbsp;외면은&nbsp;강점이기도&nbsp;하지만&nbsp;지나치면&nbsp;우울과&nbsp;의기소침에&nbsp;빠질&nbsp;수&nbsp;있으니&nbsp;자기&nbsp;표현력과&nbsp;말하는&nbsp;습관이&nbsp;필요하다.</p>";
+            } else if (colorArr[1] == "violet") {
+                app.innerHTML += "<p>자신을&nbsp;믿고&nbsp;성숙해져야&nbsp;할&nbsp;때.&nbsp;뛰어난&nbsp;능력에&nbsp;비해&nbsp;자긍심이&nbsp;부족한&nbsp;당신.&nbsp;타인의&nbsp;인정을&nbsp;통해&nbsp;자신을&nbsp;찾기보다&nbsp;성실하고&nbsp;끈기&nbsp;있는&nbsp;상황&nbsp;극복을&nbsp;통해&nbsp;성장해보자.</p>";
+            } else if (colorArr[1] == "magenta") {
+                app.innerHTML += "<p>나를&nbsp;먼저&nbsp;사랑해야&nbsp;할&nbsp;때.&nbsp;타인에&nbsp;대한&nbsp;일방적인&nbsp;지원과&nbsp;협조는&nbsp;나의&nbsp;욕구에&nbsp;대한&nbsp;가치를&nbsp;잊게&nbsp;만들&nbsp;수&nbsp;있으니&nbsp;의무적&nbsp;보답은&nbsp;자제하자.</p>";
+            }
+        }
+
+        function input_append03() {
+            app = document.getElementById("res03");
+            if (colorArr[2] == "red") {
+                app.innerHTML += "<p>생각해&nbsp;둔&nbsp;새로운&nbsp;일에&nbsp;대한&nbsp;행동을&nbsp;미루지&nbsp;말고&nbsp;현실에&nbsp;집중해&nbsp;기회를&nbsp;잡자.&nbsp;에너지가&nbsp;고갈되어&nbsp;재충전의&nbsp;필요성을&nbsp;알리는&nbsp;것일&nbsp;수도&nbsp;있는데,&nbsp;이때&nbsp;파란색은&nbsp;에너지&nbsp;보충을&nbsp;도울&nbsp;수&nbsp;있다.</p>";
+            } else if (colorArr[2] == "orange") {
+                app.innerHTML += "<p>순간적&nbsp;충동을&nbsp;자제하고&nbsp;신중하게&nbsp;건설적으로&nbsp;행동하자.&nbsp;내적&nbsp;위축으로&nbsp;인한&nbsp;선택이라면&nbsp;용감한&nbsp;행동력과&nbsp;인생을&nbsp;즐기려는&nbsp;의지를&nbsp;찾아야&nbsp;한다.</p>";
+            } else if (colorArr[2] == "yellow") {
+                app.innerHTML += "<p>자신의&nbsp;선택에&nbsp;대해&nbsp;긍정적이고&nbsp;개방적으로&nbsp;행동하자.&nbsp;휴식의&nbsp;필요성에&nbsp;의해&nbsp;선택될&nbsp;수&nbsp;있는데,&nbsp;이때&nbsp;충분한&nbsp;태양빛을&nbsp;받아보자.&nbsp;또한&nbsp;나의&nbsp;지식을&nbsp;유익하게&nbsp;전달하고자&nbsp;하는&nbsp;욕구일&nbsp;때&nbsp;타고난&nbsp;직감과&nbsp;지혜를&nbsp;활용하면&nbsp;노력이&nbsp;빛을&nbsp;발할&nbsp;것이다.</p>";
+            } else if (colorArr[2] == "green") {
+                app.innerHTML += "<p>편안한&nbsp;사람들과의&nbsp;의미&nbsp;있는&nbsp;관계&nbsp;형성을&nbsp;통해&nbsp;나의&nbsp;가치를&nbsp;찾아보자.&nbsp;인생을&nbsp;즐거움을&nbsp;찾고&nbsp;새로운&nbsp;시각으로&nbsp;바라보는&nbsp;계기를&nbsp;통해&nbsp;상실과&nbsp;무기력에서&nbsp;벗어날&nbsp;수&nbsp;있다.</p>";
+            } else if (colorArr[2] == "turquoise") {
+                app.innerHTML += "<p>변화와&nbsp;도전을&nbsp;통해&nbsp;인생의&nbsp;성장을&nbsp;도모하자.&nbsp;인생의&nbsp;시련과&nbsp;장애물을&nbsp;반기고&nbsp;도전&nbsp;정신으로&nbsp;이겨나가면&nbsp;활력과&nbsp;강인함으로&nbsp;보상된다.</p>";
+            } else if (colorArr[2] == "blue") {
+                app.innerHTML += "<p>삶의&nbsp;순리를&nbsp;깨닫고&nbsp;매일&nbsp;매일의&nbsp;현실에&nbsp;평범함을&nbsp;중요시하자.&nbsp;생각이나&nbsp;명상만이&nbsp;전부가아닌&nbsp;일상&nbsp;속에서&nbsp;순조롭게&nbsp;적응하는&nbsp;융통성을&nbsp;발휘해야&nbsp;진정한&nbsp;자유를&nbsp;찾을&nbsp;수&nbsp;있다.</p>";
+            } else if (colorArr[2] == "violet") {
+                app.innerHTML += "<p>타고난&nbsp;능력을&nbsp;실질적으로&nbsp;사용할&nbsp;수&nbsp;있도록&nbsp;개발하자.&nbsp;특별한&nbsp;치유력을&nbsp;타인과&nbsp;나누고싶다면&nbsp;자신을&nbsp;믿고&nbsp;그&nbsp;능력을&nbsp;갈고&nbsp;닦아야&nbsp;한다.</p>";
+            } else if (colorArr[2] == "magenta") {
+                app.innerHTML += "<p>이미&nbsp;목표를&nbsp;향해&nbsp;노력&nbsp;중이거나&nbsp;어느&nbsp;정도&nbsp;수준에&nbsp;도달한&nbsp;상태.&nbsp;이럴&nbsp;때일수록&nbsp;자만과&nbsp;우월함에&nbsp;사로잡히지&nbsp;않도록&nbsp;조심해야&nbsp;사람들과의&nbsp;관계에&nbsp;문제가&nbsp;생기지&nbsp;않는다.</p>";
+            }
+        }
+
+
+        function resultDisplay() {
+            document.getElementById('result-01-box').className = "color-" + colorArr[0];
+            document.getElementById('result-02-box').className = "color-" + colorArr[1];
+            document.getElementById('result-03-box').className = "color-" + colorArr[2];
+
+            input_append01();
+            input_append02();
+            input_append03();
+        }
+
+        function restart() {
+            //            alert(colorArr[0] + "/" + colorArr[1] + "/" + colorArr[2]);
+            location.href = 'index.html';
+        }
+    </script>
+
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("input[class='stbutton']").click(function() {
+                $("div[id='restartbtn']").fadeIn(0);
+                $("div[id='allbtn']").fadeOut(0);
+                $("div[id='startbtn']").fadeOut(0);
+                $("div[id='reselectionbtn']").fadeOut(0);
+                $("div[id='resultmain']").fadeIn(0);
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
