@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 body {
     background-color: #ffffff;
 }
@@ -190,12 +191,21 @@ body {
 
 .addthis_inline_share_toolbox {
     text-align: center;
+    margin-bottom: 5%;
 }
 
 .ad-banner {
     margin-top: 5%;
     width: 320px;
     margin: 0 auto;
+}
+
+.font {
+    font-family: 'Jua', sans-serif;
+}
+
+h3 {
+    font-family: 'Jua', sans-serif;
 }
 
 @media screen and (max-width: 600px) {

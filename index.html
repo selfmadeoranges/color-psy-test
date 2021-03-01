@@ -38,7 +38,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light nav-distance">
-        <div class="container-fluid">
+        <div class="container-fluid font">
             <a class="navbar-brand" href="#">색채 심리 테스트</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -76,9 +76,9 @@
         </div>
     </nav>
 
-    <section class="section">
-        <h1 class="title"><b>색채 심리 테스트</b></h1>
-        <h2 class="subtitle">마음에 드는 순서대로 <b>3가지</b> 선택해보세요</h2>
+    <section class="section" id="sectiontitle">
+        <h1 class="title font"><b>색채 심리 테스트</b></h1>
+        <h2 class="subtitle font">마음에 드는 순서대로 <b>3가지</b> 선택해보세요</h2>
     </section>
 
     <section class="mainsection">
@@ -96,22 +96,22 @@
                 <input class="color-magenta" id="magenta" onclick="clickColor()" type="button" value="   "></input>
             </div>
         </div>
-        <div class="result-main" id="resultmain" style="display:none;">
+        <div class="result-main font" id="resultmain" style="display:none;">
             <div class="result-01" id="res01">
                 <input id="result-01-box" type="button" value="   "></input>
-                <h3 class="title"><b>나는 어떤 사람인가</b></h3>
+                <h3 class="title font"><b>나는 어떤 사람인가</b></h3>
             </div>
             <div class="result-02" id="res02">
                 <input id="result-02-box" type="button" value="   "></input>
-                <h3 class="title"><b>무의식적 생각</b></h3>
+                <h3 class="title font"><b>무의식적 생각</b></h3>
             </div>
             <div class="result-03" id="res03">
                 <input id="result-03-box" type="button" value="   "></input>
-                <h3 class="title"><b>목표를 이루기 위해</b></h3>
+                <h3 class="title font"><b>목표를 이루기 위해</b></h3>
             </div>
         </div>
 
-        <div class="other-btn">
+        <div class="other-btn font">
             <!-- <input class="stbutton" id="stbtn" onclick="location.href='result.html'" type="button" value="결과보기"></input> -->
             <div class="start-btn" id="startbtn">
                 <input class="stbutton" id="stbtn" onclick="resultDisplay()" type="button" value="결과보기"></input>
@@ -257,6 +257,7 @@
                 $("div[id='allbtn']").fadeOut(0);
                 $("div[id='startbtn']").fadeOut(0);
                 $("div[id='reselectionbtn']").fadeOut(0);
+                $("div[id='sectiontitle']").fadeOut(0);
                 $("div[id='resultmain']").fadeIn(0);
             });
         });
