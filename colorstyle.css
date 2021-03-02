@@ -104,7 +104,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 30px;
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
 .color-orange {
@@ -116,7 +116,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 30px;
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
 .color-yellow {
@@ -128,7 +128,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 30px;
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
 .color-green {
@@ -140,7 +140,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 30px;
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
 .color-turquoise {
@@ -152,7 +152,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 30px;
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
 .color-blue {
@@ -164,7 +164,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 30px;
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
 .color-violet {
@@ -176,7 +176,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 30px;
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
 .color-magenta {
@@ -188,7 +188,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 30px;
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
 .addthis_inline_share_toolbox {
