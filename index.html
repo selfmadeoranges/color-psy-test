@@ -149,7 +149,6 @@
             }
 
             if (count == 3) {
-                btn_css_change();
                 btn_on();
             }
         }
@@ -165,8 +164,8 @@
             document.getElementById("magenta").value = "   ";
             count = 0;
 
-            btn.style.backgroundColor = "#7C7C93";
-            btn.style.borderColor = "#7C7C93";
+            btn_off();
+
         }
 
         function input_append01() {
@@ -251,12 +250,15 @@
         function btn_on() {
             btn = document.getElementById('stbtn');
             btn.disabled = false;
-        }
-
-        function btn_css_change() {
-            btn = document.getElementById('stbtn');
             btn.style.backgroundColor = "#444464";
             btn.style.borderColor = "#444464";
+        }
+
+        function btn_off() {
+            btn = document.getElementById('stbtn');
+            btn.disabled = disabled;
+            btn.style.backgroundColor = "#7C7C93";
+            btn.style.borderColor = "#7C7C93";
         }
     </script>
 
