@@ -206,6 +206,26 @@ body {
     font-family: 'Jua', sans-serif;
 }
 
+.footer {
+    background-color: darkgray;
+    font-family: 'Jua', sans-serif;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.contact01 {
+    margin-bottom: 3%;
+}
+
+.contact02 {
+    margin-bottom: 3%;
+}
+
+.footer__text {
+    margin-bottom: 5%;
+}
+
 h3 {
     font-family: 'Jua', sans-serif;
 }
