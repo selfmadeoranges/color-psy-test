@@ -97,7 +97,7 @@
         <div class="other-btn font">
             <!-- <input class="stbutton" id="stbtn" onclick="location.href='result.html'" type="button" value="결과보기"></input> -->
             <div class="start-btn" id="startbtn">
-                <input class="stbutton" id="stbtn" onclick="resultDisplay()" type="button" value="결과보기"></input>
+                <input class="stbutton" id="stbtn" onclick="resultDisplay()" type="button" value="결과보기" disabled="disabled"></input>
             </div>
             <div class="reselection-btn" id="reselectionbtn">
                 <input class="rsltbutton" id="reselbtn" onclick="reselection()" type="button" value="재선택"></input>
@@ -147,6 +147,11 @@
                 alert("3개만 선택 가능합니다! 재선택 버튼을 눌러주세요");
                 count = 3;
             }
+
+            if (count == 3) {
+                btn_css_change();
+                btn_on();
+            }
         }
 
         function reselection() {
@@ -161,6 +166,9 @@
             count = 0;
 
             document.getElementByid("testtest").sytle.display = "block";
+
+            btn.style.backgroundColor = "#7C7C93";
+            btn.style.borderColor = "#7C7C93";
         }
 
         function input_append01() {
@@ -240,6 +248,17 @@
 
         function restart() {
             location.href = 'index.html';
+        }
+
+        function btn_on() {
+            btn = document.getElementById('stbtn');
+            btn.disabled = false;
+        }
+
+        function btn_css_change() {
+            btn = document.getElementById('stbtn');
+            btn.style.backgroundColor = "#444464";
+            btn.style.borderColor = "#444464";
         }
     </script>
 
