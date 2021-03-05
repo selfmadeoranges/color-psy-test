@@ -97,7 +97,9 @@
         <div class="other-btn font">
             <!-- <input class="stbutton" id="stbtn" onclick="location.href='result.html'" type="button" value="결과보기"></input> -->
             <div class="start-btn" id="startbtn">
-                <input class="stbutton" id="stbtn" onclick="resultDisplay()" type="button" value="결과보기" disabled="disabled"></input>
+                <div class="layerpopup">
+                    <input class="popbtn" type="button" value="결과보기"></input>
+                </div>
             </div>
             <div class="reselection-btn" id="reselectionbtn">
                 <input class="rsltbutton" id="reselbtn" onclick="reselection()" type="button" value="재선택"></input>
@@ -108,6 +110,14 @@
         </div>
 
     </section>
+
+    <!--popup layer-->
+    <div class="layer_bg" id="layerbg"></div>
+    <div id="layer">
+        <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-qbrl3yCbH42GDbK3" data-ad-width="300" data-ad-height="250"></ins>
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+        <input class="stbutton" id="stbtn" onclick="resultDisplay()" type="button" value="결과보기" disabled="disabled"></input>
+    </div>
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <div class="share-box">
@@ -241,6 +251,9 @@
             input_append01();
             input_append02();
             input_append03();
+
+            document.getElementById('layer').style.display = "none"
+            document.getElementById('layerbg').style.display = "none";
         }
 
         function restart() {
@@ -274,6 +287,20 @@
                 $("div[id='resultmain']").fadeIn(0);
                 $("section[id='resulttext']").fadeIn(0);
             });
+        });
+    </script>
+
+    <script>
+        $(".layerpopup input").click(function(e) {
+            e.preventDefault();
+            $("#layer").show();
+            $(".layer_bg").show();
+        });
+
+        $("#layer .close, .layer_bg").click(function(e) {
+            e.preventDefault();
+            $("#layer").hide();
+            $(".layer_bg").hide();
         });
     </script>
 
