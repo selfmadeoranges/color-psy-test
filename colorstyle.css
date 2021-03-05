@@ -22,16 +22,16 @@ body {
     margin-top: 8%;
 }
 
+.resulttitle {
+    font-size: 2rem;
+}
+
 .title {
     font-family: NanumSquareR;
     font-size: 3rem;
     line-height: 1.67;
     text-align: center;
     color: var(--dark-grey-blue);
-}
-
-.title .resulttitle {
-    font-size: 2rem;
 }
 
 .subtitle {
