@@ -212,6 +212,7 @@ body {
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
+    margin-top: 5%;
 }
 
 .contact01 {
@@ -261,10 +262,11 @@ h3 {
     display: none;
     position: absolute;
     padding-top: 5%;
+    padding-bottom: 5%;
     top: 50%;
     left: 50%;
     background-color: #fff;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -80%);
     text-align: center;
 }
 

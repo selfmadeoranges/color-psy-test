@@ -95,10 +95,9 @@
         </div>
 
         <div class="other-btn font">
-            <!-- <input class="stbutton" id="stbtn" onclick="location.href='result.html'" type="button" value="결과보기"></input> -->
             <div class="start-btn" id="startbtn">
                 <div class="layerpopup">
-                    <input class="popbtn" type="button" value="결과보기"></input>
+                    <input class="popbtn" id="popupbtn" type="button" value="결과보기"></input>
                 </div>
             </div>
             <div class="reselection-btn" id="reselectionbtn">
@@ -270,10 +269,20 @@
             btn.disabled = false;
             btn.style.backgroundColor = "#444464";
             btn.style.borderColor = "#444464";
+
+            btn = document.getElementById('popupbtn');
+            btn.disabled = false;
+            btn.style.backgroundColor = "#444464";
+            btn.style.borderColor = "#444464";
         }
 
         function btn_off() {
             btn = document.getElementById('stbtn');
+            btn.disabled = 'disabled';
+            btn.style.backgroundColor = "#7C7C93";
+            btn.style.borderColor = "#7C7C93";
+
+            btn = document.getElementById('popupbtn');
             btn.disabled = 'disabled';
             btn.style.backgroundColor = "#7C7C93";
             btn.style.borderColor = "#7C7C93";
