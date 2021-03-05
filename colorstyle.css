@@ -30,6 +30,10 @@ body {
     color: var(--dark-grey-blue);
 }
 
+.title .resulttitle {
+    font-size: 2rem;
+}
+
 .subtitle {
     margin-top: 3%;
     font-family: NanumSquareR;
@@ -267,6 +271,8 @@ h3 {
     position: absolute;
     padding-top: 5%;
     padding-bottom: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
     top: 50%;
     left: 50%;
     background-color: #fff;
